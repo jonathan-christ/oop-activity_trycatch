@@ -16,6 +16,8 @@ public class ExceptionEx1 {
                 total += vals[index];
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.err.println("Error: "+e.getMessage()+", skipping value");
+            } catch (Exception e){
+                System.err.println("Error: "+e.getMessage());
             }
         }
         System.out.println(total);

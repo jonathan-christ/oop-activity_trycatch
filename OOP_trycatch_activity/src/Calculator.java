@@ -9,6 +9,7 @@ public class Calculator {
     public double divide(int x, int y) {
         try {
             return x / y;
+            
         } catch (ArithmeticException e) {
             System.err.println("Error: "+e.getMessage());
             if (x < 0) {
@@ -17,6 +18,9 @@ public class Calculator {
                 return Double.POSITIVE_INFINITY;
             }
 
+        } catch (Exception e){
+            System.err.println("Error: "+e.getMessage());
+            return Double.NaN;
         }
 
     }
